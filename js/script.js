@@ -3,6 +3,23 @@
 let APIkey = "3426654f99a0dfa7522e4aab3cb64af2"
 
 
+let cities = ["London", "Paris", "New York", "Madrid"];
+
+
+
+//activatebutton
+const activateButton = document.querySelector("#btn search-button");
+
+activateButton.addEventListener("click", function (event) {
+    if (event.target.matches("btn")){
+       // console.log("Button pressed");
+    }
+})
+
+
+
+
+
 //create a weather dashboard with form inputs, this must link to the html
 
 
