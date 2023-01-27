@@ -1,30 +1,23 @@
-//add my own API key
+//3426654f99a0dfa7522e4aab3cb64af2  (api key)
+console.log("hi");
 
-let APIkey = "3426654f99a0dfa7522e4aab3cb64af2"
+//event listener for form submission
+$("#search-form").on("submit", function(event){
+    //search-form is 1st ID on form
+    event.preventDefault();
+    let citySearch = $("#search-input").val();
+    //search-input is the class on the input element
+    console.log(citySearch);
+    console.log("hiya");
+    let queryURL = "http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}" + "&apikey=3426654f99a0dfa7522e4aab3cb64af2";
 
-
-let cities = ["London", "Paris", "New York", "Madrid"];
-
-
-
-//activatebutton
-const activateButton = document.querySelector("#btn search-button");
-
-activateButton.addEventListener("click", function (event) {
-    if (event.target.matches("btn")){
-       // console.log("Button pressed");
-    }
-})
-
-
-
-
-
-//create a weather dashboard with form inputs, this must link to the html
+    fetch(queryURL)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+});
 
 
-//when a user views the weather in a city they must be able to see the city name, the data, an icon representation of the weather conditions, the temperature, the humidity and the wind speed
 
-//the user will also need to see a five day forecast
 
-//the user should be able to find cities they have previously viewed (using local storage) and this will present them with current and future conditions 
