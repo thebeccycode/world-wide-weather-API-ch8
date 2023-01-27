@@ -1,2 +1,38 @@
+ul {
+    list-style: none;
+}
 
+h5{
+    text-align: center;
+}
 
+#searchbox {
+    margin: 50px;
+    justify-items: center;
+}
+
+#submit-search{
+    background-color: teal;
+    color: wheat;
+    float: right;
+}
+
+.navbar{
+    font-size: 86px ;
+    font-family: 'Lucida Sans';
+    background-color: teal;
+    color: wheat;
+}
+
+body{
+    background-color: beige;
+    color: teal;
+    font-family: 'Lucida Sans';
+    font-size: 20px;
+}
+
+footer{
+    margin: 50px;
+    padding: 50px;
+    text-align:right;
+}
