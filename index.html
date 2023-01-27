@@ -2,88 +2,73 @@
 <html lang="en-gb">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API Powered Weather Forecast</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/style.css">
   <title>Weather Dashboard</title>
 </head>
 
 <body>
-  <header class="container-fluid">
-    <h1>Weather Dashboard</h1>
-    <p>Enter your city to see the predicted weather forecast. </p>
-  </header>
-<br>
-  <form id="search-form">
-    <div class="form-group">
-      <label>Search for a city: </label>
-      <input type="text" class="search-input">
-      <button type="submit">Submit</button>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">API Powered Five-Day Forecast</a>
     </div>
-  </form>
+  </nav>
 
-  <main id="card-container">
-    <div class="card-one card" style="width: 18rem;">
-      <label>Selected City:</label>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Date: </li>
-        <li class="list-group-item">Icon:</li>
-        <li class="list-group-item">Temperature:</li>
-        <li class="list-group-item">Humidity: </li>
-        <li class="list-group-item">Wind: </li>
-      </ul>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Search for a City Below:</label>
+    <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+  </div>
+
+  <div class="d-flex justify-content-evenly">
+    <div class="card" style="width: 16rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
     </div>
-    <div class="card-two card" style="width: 18rem;">
-      <label>Selected City:</label>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Date: </li>
-        <li class="list-group-item">Icon:</li>
-        <li class="list-group-item">Temperature:</li>
-        <li class="list-group-item">Humidity: </li>
-        <li class="list-group-item">Wind: </li>
-      </ul>
+    <div class="card" style="width: 16rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
     </div>
+    <div class="card" style="width: 16rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 16rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
     
-    <div class="card-three card" style="width: 18rem;">
-      <label>Selected City:</label>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Date: </li>
-        <li class="list-group-item">Icon:</li>
-        <li class="list-group-item">Temperature:</li>
-        <li class="list-group-item">Humidity: </li>
-        <li class="list-group-item">Wind: </li>
-      </ul>
+    <div class="card" style="width: 16rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
     </div>
-    
-    <div class="card-four card" style="width: 18rem;">
-      <label>Selected City:</label>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Date: </li>
-        <li class="list-group-item">Icon:</li>
-        <li class="list-group-item">Temperature:</li>
-        <li class="list-group-item">Humidity: </li>
-        <li class="list-group-item">Wind: </li>
-      </ul>
-    </div>
-    
-    <div class="card-five card" style="width: 18rem;">
-      <label>Selected City:</label>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Date: </li>
-        <li class="list-group-item">Icon:</li>
-        <li class="list-group-item">Temperature:</li>
-        <li class="list-group-item">Humidity: </li>
-        <li class="list-group-item">Wind: </li>
-      </ul>
-    </div>
-  </main>
-
-
-  
-
+  </div>
 
 
   <!-- Moment.js -->

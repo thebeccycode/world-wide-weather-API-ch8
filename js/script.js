@@ -1,28 +1,21 @@
 const apiKey = "3426654f99a0dfa7522e4aab3cb64af2";
 
-console.log("hi");
+fetch("http://api.openweathermap.org/geo/1.0/direct?q=Leeds&limit=5&appid=3426654f99a0dfa7522e4aab3cb64af2")
+    .then(response => response.json())
+    .then(cityFound => {
+        let firstCity = cityFound[0];
+        console.log("first city latitude:", firstCity.lat);
+        console.log("first city longitude:", firstCity.lon);
 
-//event listener for form submission
-$("#search-form").on("submit", function(event){
-    //search-form is 1st ID on form
-    event.preventDefault();
-    let citySearch = $("#search-input").val();
-    //search-input is the class on the input element
-    console.log(citySearch);
-    console.log("hiya");
-    let queryURL = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=3426654f99a0dfa7522e4aab3cb64af2";
+        //the code above finds the longitude and latitude of the firstCity(london) and turns that into a variable.
 
-    fetch(queryURL)
+        return fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=3426654f99a0dfa7522e4aab3cb64af2`)
+    })
+
+
     .then(response => response.json())
     .then(data => {
         console.log(data);
     })
-});
 
-
-//create function to append city onto html document
-
-
-//
-
-
+//the code above takes the first city longitude and latitude variables so that when the city is changed the variables are found.
