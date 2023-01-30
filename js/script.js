@@ -5,20 +5,26 @@ let currentForecast = document.getElementById("currentforecast");
 
 
 
-//event listener for form submission
-$("#searchbox").on("submit", function (event) {
-   
+//render user input
+//get user input using html form element
+//store input in variable
+//insert into html with javascript innerhtml
+function getUserInput(){
+    let userInput = document.getElementById("searchinput").value;
+    document.getElementById("submit-search").innerHTML;
 
-});
+}
 
-//add search history to html
-function userSearchHistory(){
-    let button = document.createElement("button")
-    button.addEventListener("click", (event) =>{
-        event.preventDefault()
-        console.log(userSearchHistory);
-    })
-};
+//store in local storage
+//check variable exists (querySelector) and then run an event listener
+
+searchInput.addEventListener("submit", function(event){
+    event.preventDefault();
+    localStorage.setItem("searchInput", searchInput)
+})
+
+
+
 
 //this fetches current weather for location based on co-ordinates 
 fetch("http://api.openweathermap.org/geo/1.0/direct?q=Leeds&limit=5&appid=3426654f99a0dfa7522e4aab3cb64af2")
