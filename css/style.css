@@ -35,3 +35,13 @@ footer{
     padding: 50px;
     text-align:right;
 }
+
+#recent-search-container{
+    justify-items: center;
+    margin: 50px;
+}
+
+#currentforecast{
+    margin: 50px;
+    padding: 20px;
+}
