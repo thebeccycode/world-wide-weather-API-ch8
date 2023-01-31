@@ -8,7 +8,7 @@ This was challenging as my knowledge of both JavaScript and jQuery is still a wo
 I am submitting this before it is complete with the intentions of returning to it once I have recieved the help I need to finish it.
 
 ##Screenshot 
-*to be inserted later*
+*a screenshot of my site is to be inserted later*
 
 ##Credit
 To the creators of the OpenWeather API.
