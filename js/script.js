@@ -45,3 +45,4 @@ searchbox.addEventListener("submit", function (event) {
 })
 
 
+let retrieveData = document.getElementsByClassName("temp-current")[0].children[0].innerHTML = `${(cityList[0].main.temp - 273.15).toFixed(2)}`;
